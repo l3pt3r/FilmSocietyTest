@@ -12,6 +12,7 @@ export class ListComponent implements OnInit {
   dat: any;
   pageIndex: number = 1;
   pageLength: number = 10;
+  API_KEY: string = '247de336';
   total: number = 0;
   url: string = '';
 
@@ -22,6 +23,8 @@ export class ListComponent implements OnInit {
       this.url = params['link'];
 
       let tmp = JSON.parse(params['data']);
+      console.log(tmp);
+      
       this.dat = tmp.Search;
       this.total = tmp.totalResults;
     });
@@ -36,6 +39,14 @@ export class ListComponent implements OnInit {
         for (var i = 0; i < obj[0].length; i++) {
           this.dat.push(obj[0][i]);
         }
+    });
+  }
+
+  getIdResults(searchId: string) {
+    let url = `https://omdbapi.com/?apikey=${this.API_KEY}&i=${searchId}`;
+    return this.http.get(url).subscribe((res) => {
+      console.log(res);
+      // this.route.navigate(['Details'], { queryParams: res });
     });
   }
 }

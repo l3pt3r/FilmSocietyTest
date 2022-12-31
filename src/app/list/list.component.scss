@@ -1,6 +1,11 @@
 .listCard {
   width: 90%;
   margin: 1% 5%;
+  background-color: #e5d4ed;
+}
+.listCard:hover,
+button:hover {
+  transform: scale(1.05);
 }
 
 .listCardCont {
@@ -21,3 +26,4 @@
 .paginatorContainer button {
     margin: 2%;
 }
+
