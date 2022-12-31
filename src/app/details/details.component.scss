@@ -1,0 +1,19 @@
+.infoCard {
+    width: 90vw;
+    margin: 5%;
+    padding: 2em;
+}
+
+.topCont {
+    display: flex; 
+    justify-content: space-between;
+}
+
+.topCont img {
+    width: 20%;
+    background-size: contain;
+}
+
+.movieKeyInfo {
+    width: 70%;
+}

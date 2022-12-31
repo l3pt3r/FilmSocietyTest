@@ -1,0 +1,14 @@
+<mat-card class="infoCard">
+    <mat-card-content>
+        <div class="topCont">
+            <img src={{dat.Poster}} class="movieImg"/>
+            <div class="movieKeyInfo">
+                <h1>{{dat.Title | uppercase}} ({{dat.Year}})</h1>
+                <h2>{{dat.imdbRating}} <span>per {{dat.imdbVotes}}</span></h2>
+                <h3>{{dat.Runtime}} {{dat.Genre}}</h3>
+                <h3>Director: {{dat.Director}}</h3>
+                <h3>Cast: {{dat.Actors}}</h3>
+            </div>
+        </div>
+    </mat-card-content>
+  </mat-card>

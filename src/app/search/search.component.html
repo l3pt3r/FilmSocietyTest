@@ -1,0 +1,66 @@
+<mat-card class="container">
+    <img src="../assets/logo.png" class="logoImg" />
+  
+    <mat-accordion>
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title> Title Search </mat-panel-title>
+          <mat-panel-description>
+            search a Movie or Series by Title
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-form-field class="example-full-width">
+          <mat-label
+            >Type the title of a Movie or Series you want to search ...</mat-label
+          >
+          <input
+            matInput
+            [(ngModel)]="searchQuery"
+          />
+        </mat-form-field>
+  
+        <button
+          mat-raised-button
+          color="primary"
+          class="searchBtn"
+          (click)="getTitleResults()"
+        >
+          search
+        </button>
+      </mat-expansion-panel>
+  
+      <mat-expansion-panel
+        (opened)="panelOpenState2 = true"
+        (closed)="panelOpenState2 = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title> IMDB id Search </mat-panel-title>
+          <mat-panel-description>
+            search a Movie or Series by IMDB id
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-form-field class="example-full-width">
+          <mat-label
+            >Type the IMDB id of a Movie or Series you want to search
+            ...</mat-label
+          >
+          <input
+            matInput
+            [(ngModel)]="searchQuery"
+          />
+        </mat-form-field>
+  
+        <button
+          mat-raised-button
+          color="primary"
+          class="searchBtn"
+          (click)="getIdResults()"
+        >
+          search
+        </button>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-card>

@@ -1,0 +1,23 @@
+.listCard {
+  width: 90%;
+  margin: 1% 5%;
+}
+
+.listCardCont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.listCardCont img {
+  max-height: 200px;
+}
+
+.paginatorContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.paginatorContainer button {
+    margin: 2%;
+}
